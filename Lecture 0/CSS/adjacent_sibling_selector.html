@@ -1,0 +1,37 @@
+<!-- Adjacent Sibling selector -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent Sibling Selector</title>
+    <style>
+
+     li#oo + li {
+        color:green;
+     }
+
+    </style>
+
+<style>
+ h1+h1  {color:green;}
+</style>
+
+</head>
+<body>
+    <!-- example 1 -->
+    <ol>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li id="oo">Banana</li>     
+        <li>Orange</li>
+    </ol> <br>
+
+    <!-- example 2 -->
+    <h1 >hello</h1>
+    <h1>hi</h1>
+
+
+</body>
+</html>

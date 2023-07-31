@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo class selector</title>
+    
+    
+    <style>
+
+        /* 1. :hover */
+        #qq:hover{background-color:red;}
+
+        /* 2. :active */
+        #ww:active {
+             transform:scale(0.8);
+             background-color:green;}
+        
+        /*3. :focus  */
+        input:focus {
+            border:5px solid green;
+        }
+
+        /* 4. :visited */
+
+        a:visited{               /*if web is clicked once it will remain red forever then  */
+            color:red;}
+
+       /* 5+6. :first-child "or" :last child  */
+             
+       ol li:last-child {color:red;}
+
+       /* 7. :nth child() */
+         li#pp:nth-child(2) {color:red;}
+
+
+    </style>
+</head>
+<body>
+     <h1 style="text-align: center; "><u>Pseudo class Selectors</u></h1>
+
+    <button id="qq" > Click 1</button> <br> <br>
+
+    <button id="ww"> Click 2</button>   <br> <br>
+
+    <input type="text" placeholder="Enter any thing" name="Anything" ><br> <br>
+
+    <a href="https://alibaba.com" TARGET="_MAIN">Alibaba</a> <br> <br>  
+
+    <ol>
+        <li> 1st </li>
+        <li> 2nd </li>
+        <li> 3rd </li>
+    </ol> <br> <br>  
+       
+    <ul>
+        <li> 001 </li>
+        <li id="pp"> 002 </li>
+        <li> 003 </li>
+    </ul>
+
+
+</body>
+</html>

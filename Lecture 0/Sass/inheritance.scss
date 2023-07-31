@@ -1,0 +1,21 @@
+.btn {                  //Parent class
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  .primary-btn {
+    @extend .btn;                         //child class no 1
+    background-color: cyan;
+    color: white;
+  }
+  
+
+  .secondary-btn {
+    @extend .btn;                          //child class no 2
+    background-color:yellowgreen;
+    color: wheat;
+  }
+  

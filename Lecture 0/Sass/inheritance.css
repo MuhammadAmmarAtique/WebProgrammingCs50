@@ -1,0 +1,16 @@
+.btn, .secondary-btn, .primary-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: cyan;
+  color: white;
+}
+
+.secondary-btn {
+  background-color: yellowgreen;
+  color: wheat;
+}/*# sourceMappingURL=inheritance.css.map */

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+          <title>Form</title>
+      </head>
+      <body>
+    
+    
+    <form>
+    <!-- e.g 1 (text based input+email,password,number) -->
+        <div>
+            <input type="name" placeholder="name" name="name">
+            <input type="email" placeholder="email" name="email">
+            <input type="password" placeholder="password" name="password">
+            <input type="number" placeholder="contact no" name="no">
+
+        <input type="submit">
+        </div> <br>
+    <!-- e.g 2 (radio button input) -->
+        <div>
+            <input type="radio" value="red" name="colour">Red
+            <input type="radio" value="blue" name="colour">Blue
+            <input type="radio" value="green" name="colour">Green
+            <input type="radio" value="nardo" name="colour">Nardo
+            <input type="radio" value="pink" name="colour">Pink
+            <input type="radio" value="none" name="colour">None
+        </div> <br>
+    <!-- e.g 3 (input taken through list/data list) -->    
+         <div>
+            <input list="countries" placeholder="Enter your country" name="country">
+
+            <datalist id="countries">
+                <option value="Canada">
+                <option value="United States">
+                <option value="Japan">
+                <option value="South Korea">
+                <option value="Germany">
+                <option value="France">
+                <option value="United Kingdom">
+                <option value="Switzerland">
+                <option value="Australia">
+                <option value="New Zealand">
+              </datalist>
+         </div>
+    </form>
+    </body>
+</html>
