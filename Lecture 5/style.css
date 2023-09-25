@@ -1,0 +1,19 @@
+/* CSS Boiler plate */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+ }
+html , body
+{ 
+height: 100%;
+width: 100%;
+}
+/* Main styling starts here */
+
+h1
+{
+    text-align: center;
+    background: rgba(220, 20, 60, 0.8);
+}
