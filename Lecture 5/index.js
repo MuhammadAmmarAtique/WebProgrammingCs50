@@ -1,27 +1,34 @@
-// 1.Function which runs on click ( It is acting as Event handler)
+// 1.Function which runs when user clicks on button ( It is acting as Event handler)
+
 
 // let value=0;
 
 // function counter() {
+
 //     // value=value+1;
 //     // value+=1;
-//    value ++;
+//     value++;
 //     console.log(value);
+
+//     if(value % 10 ==0)
+//     {
+//         alert(`The counter is at: ${value}`);
+//     }
     
 // };
 
 // 2.Dom Manipulation
 
-let button=document.getElementById('btn');
-button.addEventListener('click',toggle);
+// let button=document.getElementById('btn');
+// button.addEventListener('click',toggle);
 
-function toggle() {
-    if (button.innerHTML==='Hi') {
-        button.innerHTML='Bye';
-    }
-   else
-    {
-        button.innerHTML='Hi';
-    }
+// function toggle() {
+//     if (button.innerHTML==='Hi') {
+//         button.innerHTML='Bye';
+//     }
+//    else
+//     {
+//         button.innerHTML='Hi';
+//     }
     
-}
+// }

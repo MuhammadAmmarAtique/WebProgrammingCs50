@@ -18,7 +18,7 @@ width: 100%;
     background: rgba(220, 20, 60, 0.8);
 }
 
-#btn
+.btn
 {
     text-align: center;
     background-color: crimson;
