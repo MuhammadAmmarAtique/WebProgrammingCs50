@@ -35,11 +35,33 @@
 
 // 3.Adding Event listener in Html form
 
-const nameform= document.getElementById('nameform');
+// const nameform= document.getElementById('nameform');
 
-nameform.addEventListener('submit',()=>{
+// nameform.addEventListener('submit',()=>{
 
-    const username= document.getElementById('username').value;
-    alert(`Hello, ${username}!`);
+//     const username= document.getElementById('username').value;
+//     alert(`Hello, ${username}!`);
 
+// })
+
+// 4.Changing CSS through JS
+
+const hello=document.querySelector('#hello');
+
+let btnone=document.querySelector('#btnone');
+btnone.addEventListener('click',function ()
+{
+    hello.style.color='red';
+})
+
+let btntwo=document.querySelector('#btntwo');
+btntwo.addEventListener('click',function ()
+{
+    hello.style.color='green';
+})
+
+let btnthree=document.querySelector('#btnthree');
+btnthree.addEventListener('click',function ()
+{
+    hello.style.color='blue';
 })
