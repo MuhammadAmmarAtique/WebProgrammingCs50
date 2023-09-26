@@ -19,7 +19,7 @@
 
 // 2.Dom Manipulation
 
-// let button=document.getElementById('btn');
+// let button=document.querySelector('.btn');
 // button.addEventListener('click',toggle);
 
 // function toggle() {
@@ -32,3 +32,14 @@
 //     }
     
 // }
+
+// 3.Adding Event listener in Html form
+
+const nameform= document.getElementById('nameform');
+
+nameform.addEventListener('submit',()=>{
+
+    const username= document.getElementById('username').value;
+    alert(`Hello, ${username}!`);
+
+})
