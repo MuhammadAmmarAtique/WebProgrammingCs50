@@ -17,7 +17,7 @@
     
 // };
 
-// 2.Dom Manipulation
+// 2.Dom Manipulation/toggle function
 
 // let button=document.querySelector('.btn');
 // button.addEventListener('click',toggle);
@@ -46,22 +46,36 @@
 
 // 4.Changing CSS through JS
 
-const hello=document.querySelector('#hello');
+// const hello=document.querySelector('#hello');
 
-let btnone=document.querySelector('#btnone');
-btnone.addEventListener('click',function ()
-{
-    hello.style.color='red';
-})
+// let btnone=document.querySelector('#btnone');
+// btnone.addEventListener('click',function ()
+// {
+//     hello.style.color='red';
+// })
 
-let btntwo=document.querySelector('#btntwo');
-btntwo.addEventListener('click',function ()
-{
-    hello.style.color='green';
-})
+// let btntwo=document.querySelector('#btntwo');
+// btntwo.addEventListener('click',function ()
+// {
+//     hello.style.color='green';
+// })
 
-let btnthree=document.querySelector('#btnthree');
-btnthree.addEventListener('click',function ()
-{
-    hello.style.color='blue';
-})
+// let btnthree=document.querySelector('#btnthree');
+// btnthree.addEventListener('click',function ()
+// {
+//     hello.style.color='blue';
+// })
+
+// There is redundancy in above logic so we will design a better logic.
+
+
+// 5.Using data attributes for HTML elements to end redundancy in above logic
+
+let AllButtons=document.querySelectorAll('button');
+
+AllButtons.forEach((button)=>{
+
+    button.addEventListener('click',()=> {
+        document.querySelector('#hello').style.color=button.dataset.color;
+    })
+});
