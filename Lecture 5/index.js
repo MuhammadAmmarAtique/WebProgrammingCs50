@@ -71,11 +71,21 @@
 
 // 5.Using data attributes for HTML elements to end redundancy in above logic
 
-let AllButtons=document.querySelectorAll('button');
+// let AllButtons=document.querySelectorAll('button');
 
-AllButtons.forEach((button)=>{
+// AllButtons.forEach((button)=>{
 
-    button.addEventListener('click',()=> {
-        document.querySelector('#hello').style.color=button.dataset.color;
-    })
-});
+//     button.addEventListener('click',()=> {
+//         document.querySelector('#hello').style.color=button.dataset.color;
+//     })
+// });
+
+
+// 6.Alternative for above logic/ using select in html and applying addeventlistener to it.
+
+let select=document.querySelector('select');
+
+select.addEventListener('change',()=>
+{
+    document.querySelector('#hello').style.color=select.value;
+})
