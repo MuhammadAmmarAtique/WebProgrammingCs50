@@ -1,6 +1,5 @@
 // 1.Function which runs when user clicks on button ( It is acting as Event handler)
 
-
 // let value=0;
 
 // function counter() {
@@ -83,9 +82,51 @@
 
 // 6.Alternative for above logic/ using select in html and applying addeventlistener to it.
 
-let select=document.querySelector('select');
+// let select=document.querySelector('select');
 
-select.addEventListener('change',()=>
+// select.addEventListener('change',()=>
+// {
+//     document.querySelector('#hello').style.color=select.value;
+// })
+
+
+// 7.Making a to do list using JS.
+
+// Disabling submit button by using html disabled property
+document.querySelector('#submit').disabled=true;
+
+// Enabling input field when user starts typing
+document.querySelector("#input").onkeyup= ()=>
 {
-    document.querySelector('#hello').style.color=select.value;
-})
+    let input =document.querySelector("#input");
+    if(input.value.length > 0)
+    {
+        document.querySelector('#submit').disabled=false;
+    }
+    else
+    {
+        document.querySelector('#submit').disabled=true;
+    }
+}
+
+// Todo list
+document.querySelector('form').onsubmit= ()=>
+{
+    const input =document.querySelector('#input').value;
+
+    // Creating a <li> tag using .createElement()
+    const li =document.createElement('li');
+    li.innerHTML=input;
+
+    // append() will make li as a child to ul.
+    document.querySelector('#tasks').append(li);
+
+    // Clearing input field after user submitted form.
+    document.querySelector('#input').value="";
+
+    // Disabling submit button again when user submitted input, so that no empty input will appear.
+    document.querySelector('#submit').disabled=true;
+
+    // Stop "form" from sending data to a server
+    return false;
+}
