@@ -1,20 +1,25 @@
 // 1.Function which runs when user clicks on button ( It is acting as Event handler)
 
-// let value=0;
+let value=0;
+value=localStorage.getItem('container');
 
-// function counter() {
+function counter() {
 
-//     // value=value+1;
-//     // value+=1;
-//     value++;
-//     console.log(value);
+    // value=value+1;
+    // value+=1;
+    value++;
+    console.log(value);
 
-//     if(value % 10 ==0)
-//     {
-//         alert(`The counter is at: ${value}`);
-//     }
+    // if(value % 10 ==0)
+    // {
+    //     alert(`The counter is at: ${value}`);
+    // }
+    localStorage.setItem('container',value);
     
-// };
+};
+setInterval(counter,1000);
+
+
 
 // 2.Dom Manipulation/toggle function
 
@@ -90,12 +95,13 @@
 // })
 
 
-// 7.Making a to do list using JS.
+// 7.Making a to do list using JS. 
+/*
 
 // Disabling submit button by using html disabled property
 document.querySelector('#submit').disabled=true;
 
-// Enabling input field when user starts typing
+// Adding eventhandler in "text-input-field" to active and deactive submit button based on condition.
 document.querySelector("#input").onkeyup= ()=>
 {
     let input =document.querySelector("#input");
@@ -130,3 +136,10 @@ document.querySelector('form').onsubmit= ()=>
     // Stop "form" from sending data to a server
     return false;
 }
+
+*/
+
+// 8.
+
+
+
