@@ -1,23 +1,23 @@
 // 1.Function which runs when user clicks on button ( It is acting as Event handler)
 
-let value=0;
-value=localStorage.getItem('container');
+// let value=0;
+// value=localStorage.getItem('container');
 
-function counter() {
+// function counter() {
 
-    // value=value+1;
-    // value+=1;
-    value++;
-    console.log(value);
+//     // value=value+1;
+//     // value+=1;
+//     value++;
+//     console.log(value);
 
-    // if(value % 10 ==0)
-    // {
-    //     alert(`The counter is at: ${value}`);
-    // }
-    localStorage.setItem('container',value);
+//     // if(value % 10 ==0)
+//     // {
+//     //     alert(`The counter is at: ${value}`);
+//     // }
+//     localStorage.setItem('container',value);
     
-};
-setInterval(counter,1000);
+// };
+// setInterval(counter,1000);
 
 
 
@@ -139,7 +139,48 @@ document.querySelector('form').onsubmit= ()=>
 
 */
 
-// 8.
+// 8.Using API
+
+
+document.querySelector('form').addEventListener('submit',(e)=>{  
+    e.preventDefault();
+    
+    
+
+    fetch('https://api.currencyapi.com/v3/latest?apikey=cur_live_pYqdTt3hLRzItMC2wosdW8nqByiXZ00umIXLc4kW')
+
+    .then(response => { return response.json() })
+
+    .then ( (response) => 
+    { 
+    const currency=document.querySelector('#currency').value.toUpperCase();
+    
+    let rate=response.data[currency];
+    if (rate == undefined)  
+    {
+        document.querySelector('#display').innerHTML=`Sorry invalid currency`;
+     
+    }
+    else
+    {
+        let rate2=rate.value;
+        if (rate2 !== undefined) 
+        {
+            document.querySelector('#display').innerHTML=`1 USD to ${currency} is: ${rate2.toFixed(3)}`;
+        } 
+
+    }   })
+
+    .catch( (error) =>{
+        console.log('Error:',error);
+    } );
+  
+    
+
+
+
+});
+
 
 
 
