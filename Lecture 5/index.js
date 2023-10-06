@@ -142,44 +142,42 @@ document.querySelector('form').onsubmit= ()=>
 // 8.Using API
 
 
-document.querySelector('form').addEventListener('submit',(e)=>{  
+document.querySelector('form').onsubmit= (e)=>{
+
+    // This will prevent "form" to submit data to backend so that our page doesnot refreshes.
     e.preventDefault();
-    
-    
 
+    // Currency is entered by user,here converting it to uppercase b/c api reponse currencies are coming in uppercase
+    //  i.e PKR,GBP etc
+    let currency=document.querySelector('#currency').value.toUpperCase();
+    console.log(currency);
+
+    // In fetch () must use single commas inside
     fetch('https://api.currencyapi.com/v3/latest?apikey=cur_live_pYqdTt3hLRzItMC2wosdW8nqByiXZ00umIXLc4kW')
-
-    .then(response => { return response.json() })
-
-    .then ( (response) => 
-    { 
-    const currency=document.querySelector('#currency').value.toUpperCase();
-    
-    let rate=response.data[currency];
-    if (rate == undefined)  
-    {
-        document.querySelector('#display').innerHTML=`Sorry invalid currency`;
-     
-    }
-    else
-    {
-        let rate2=rate.value;
-        if (rate2 !== undefined) 
+    .then(response =>{ return response.json() })
+    .then(response =>
+        { 
+        if (response.data[currency] == undefined) 
         {
-            document.querySelector('#display').innerHTML=`1 USD to ${currency} is: ${rate2.toFixed(3)}`;
+         alert("Sorry invalid currency")
         } 
+        else 
+        { 
+         let rate= response.data[currency].value;
+         document.querySelector('#display').innerHTML=`1 dollar to ${currency} is: ${rate}.`;
+            
+        }
+    });
+}
 
-    }   })
-
-    .catch( (error) =>{
-        console.log('Error:',error);
-    } );
-  
-    
+// Note:
+// https://app.currencyapi.com/dashboard (using this service for currency exchange rate apis)
+// Response from this service is limited like i have already got 200 responses out of 300.
+// (request/response flow)
+// In this free version from this web we can ask for 300 total requests.
 
 
-
-});
+ 
 
 
 
