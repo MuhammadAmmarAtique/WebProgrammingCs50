@@ -172,7 +172,7 @@ document.querySelector('form').onsubmit= (e)=>{
 
 // Note:
 // https://app.currencyapi.com/dashboard (using this service for currency exchange rate apis)
-// Response from this service is limited like i have already got 200 responses out of 300.
+// Response from this service is limited like i have already got 200+ responses out of 300.
 // (request/response flow)
 // In this free version from this web we can ask for 300 total requests.
 
